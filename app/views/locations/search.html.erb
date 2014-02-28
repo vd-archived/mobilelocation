@@ -1,0 +1,20 @@
+<% title "Search Location" %>
+<div class="row">
+	<div class="signin-panel-container">
+		<div class="panel panel-signin">
+			<div class="panel-heading">
+				<h3 class="panel-title user-icon"><span class="fa-stack fa-3x"> <i class="fa fa-circle fa-stack-2x"></i> <i class="fa fa-mobile fa-stack-1x fa-inverse"></i> </span><span class="text"><%= yield :title%></span></h3>
+			</div>
+			
+			<div class="panel-body">
+			  <%= render 'form' %>
+      </div>
+      <div class="panel-footer">
+			  <% if @geo_location %>
+			    <div>Lattitude: <%= @geo_location[:lat] %></div>
+			    <div>Longitude: <%= @geo_location[:lon] %></div>
+			  <% end %>
+      </div>
+		</div>
+	</div>
+</div>
