@@ -18,3 +18,13 @@
 		</div>
 	</div>
 </div>
+
+<% if @geo_location %>
+  <center>
+  <%= image_tag "http://maps.google.com/maps/api/staticmap?size=800x600&sensor=false&zoom=3&markers=#{@geo_location[:lat]}%2C#{@geo_location[:lon]}" %>
+  </center>
+<% end %>
+
+
+
+
